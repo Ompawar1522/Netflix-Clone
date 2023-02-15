@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/stylesheets/search.css">
+<nav>
+    <div class="w-50">
+        <ul>
+            <li><a href="/home">Movies</a></li>
+            <li><a href="/home">Series</a></li>
+            <li><a href="/home/popular">Popular</a></li>
+           
+            <li><a href="/home/random">Random Movie Selector</a></li>
+            <ul>
+    </div>
+    <div class="w-50 rigth">
+        <ul>
+            <form action="/home/search" method="get" class="search">
+                <input class="search__input" type="search" placeholder="Search" id="searchInput" name="q">
+
+                <div class="search__icon-container">
+                    <label for="searchInput" class="search__label" aria-label="Search">
+                        <svg viewBox="0 0 1000 1000" title="Search">
+                            <path fill="currentColor"
+                                d="M408 745a337 337 0 1 0 0-674 337 337 0 0 0 0 674zm239-19a396 396 0 0 1-239 80 398 398 0 1 1 319-159l247 248a56 56 0 0 1 0 79 56 56 0 0 1-79 0L647 726z" />
+                        </svg>
+                    </label>
+
+                    <button class="search__submit" aria-label="Search">
+                        <svg viewBox="0 0 1000 1000" title="Search">
+                            <path fill="currentColor"
+                                d="M408 745a337 337 0 1 0 0-674 337 337 0 0 0 0 674zm239-19a396 396 0 0 1-239 80 398 398 0 1 1 319-159l247 248a56 56 0 0 1 0 79 56 56 0 0 1-79 0L647 726z" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            <!-- <form action="/home/search" method="get">
+                <label for="search-field"><span class="screen-reader-text">To search this site, enter a search
+                        term</span></label>
+                <input class="search-field" id="search-field" type="text" name="q" value="" aria-required="false"
+                    autocomplete="off" placeholder="Search&hellip;" />
+                <button class="search-submit"><span class="screen-reader-text">Search</span><i
+                        class="fa fa-search"></i></button>
+            </form> -->
+            <li><a href=""><i class="fas fa-search"></i></a></li>
+            <li><a href="">
+                    <%= CurrUser.username %>
+                </a></li>
+            <li><a href="" class="bell"><i class="fas fa-bell"></i></a></li>
+            <li><a href="" class="sin-padding">
+                    <div class="img-content">
+                        <div class="img">
+                            <img src="/img/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png"
+                                class="img" alt="">
+                        </div>
+                        <div class="sort">
+                            <i class="sort fas fa-sort-down"></i>
+                        </div>
+                    </div>
+                </a></li>
+
+        </ul>
+    </div>
+</nav>

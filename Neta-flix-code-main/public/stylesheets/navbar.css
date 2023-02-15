@@ -1,0 +1,57 @@
+.w-90{
+	width: 90%;
+	
+}	
+.w-50{
+	width: 50%;
+}
+.w-10{
+	width: 10%;
+}
+
+
+/*Header*/
+header{
+	display: flex;
+	padding: 30px 20px 0px 30px;
+	background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 46%, rgba(0,0,0,0.6487775530133928) 79%, rgba(255,255,255,0) 100%);
+
+}
+/* header h1{
+	color: red;
+	letter-spacing: 2px
+} */
+nav{
+	display: flex;
+	justify-content: space-around;
+}
+ul{
+	display: flex;
+}
+ul li{
+	list-style: none;
+	margin: 0 10px 0 10px;
+}
+ul li a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 0 10px 0;
+	font-size: 1.1rem;
+}
+header .bell{
+	font-size: 1.3rem;
+}
+header .img{
+	width: 35px;
+	height: 35px;
+}
+header .img-content{
+	display: flex;
+}
+header .img-content .sort{
+	margin: 0 0 0 4px;
+}
+header .sin-padding{
+	padding: 5px 0 0 0;
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/popular.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  
+  <title>Document</title>
+</head>
+<body>
+  <!--
+CREDIT TO NETFLIX FOR THE DESIGN. I AM NOT AFFILIATED WITH NETFLIX.
+
+RECREATION OF THE NEW NETFLIX TOP 10 CAROUSEL. SEE THE CAROUSEL ON THE NETFLIX TOP 10 WEBSITE HERE:
+https://top10.netflix.com/
+
+FOLLOW MY CODEPEN TO SEE WHAT I'M WORKING ON:
+https://codepen.io/joshsalazar
+
+HEAD OVER TO MY WEBSITE AND BLOG TO SEE WHAT I'M LEARNING. I SHARE ALL MY INTERESTING FRONT-END DESIGN 
+AND DEVELOPMENT WORK THERE:
+joshuasalazar.net
+-->
+
+<div class="flex_container">
+  <div class="outer_container">
+    <div class="heading">
+      Global Top 10
+    </div>
+  </div>
+  <div class="outer_container" id="outer">
+    <div class="inner_container">
+      <!-- <ul class="ul_container" id="ul1">
+        
+
+      </ul> -->
+      <ul class="ul_container">
+        <div class="item_container expanded" style="z-index: 10">
+          <div class="item_number">
+            1
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/1.png?format=auto" alt="1">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>148.72 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://dnm.nflximg.net/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcZCcruNL4qg1uy7rbRagPLF2_kMt2hWh5utDUKt3DgYuhAE-Qrr1wA8b2W9vFu9ABPSY1cNzQPBoPpWSZVvaoQMZAEFXfsXrcmUNSO5YTdjIdKMDtjYbTYKRR9J.webp?r=5f1" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABeyXW3mUTPqrK4NtKn2vJlcYmKVJU5XCn6Zeis_EdNEjMmhs5rRudqWRYo2Pj7R2_pYwHviXeOrP1GKgaC4flMu_QndVSRQ8Fk-B_al3ZGz5JOXyZ28ZK7I49UdxrQ.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABeyXW3mUTPqrK4NtKn2vJlcYmKVJU5XCn6Zeis_EdNEjMmhs5rRudqWRYo2Pj7R2_pYwHviXeOrP1GKgaC4flMu_QndVSRQ8Fk-B_al3ZGz5JOXyZ28ZK7I49UdxrQ.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABeyXW3mUTPqrK4NtKn2vJlcYmKVJU5XCn6Zeis_EdNEjMmhs5rRudqWRYo2Pj7R2_pYwHviXeOrP1GKgaC4flMu_QndVSRQ8Fk-B_al3ZGz5JOXyZ28ZK7I49UdxrQ.jpg?format=auto" alt="The Guilty"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  Red notice
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 9">
+          <div class="item_number">
+            2
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/2.png?format=auto" alt="2">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>58.56 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABSlWYPUcQisKQat0S8WDXkwPjfU4yEbFT4eDXJLnL5noLRdZCre_pm3Amq11WKXU9hC3VciJLwAWf8z0nsI-rTlRTnAkpeo5iBLhbO-SMpRM0NUXzVQsllo89bYFzg.jpg?format=auto" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABSlWYPUcQisKQat0S8WDXkwPjfU4yEbFT4eDXJLnL5noLRdZCre_pm3Amq11WKXU9hC3VciJLwAWf8z0nsI-rTlRTnAkpeo5iBLhbO-SMpRM0NUXzVQsllo89bYFzg.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABSlWYPUcQisKQat0S8WDXkwPjfU4yEbFT4eDXJLnL5noLRdZCre_pm3Amq11WKXU9hC3VciJLwAWf8z0nsI-rTlRTnAkpeo5iBLhbO-SMpRM0NUXzVQsllo89bYFzg.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABSlWYPUcQisKQat0S8WDXkwPjfU4yEbFT4eDXJLnL5noLRdZCre_pm3Amq11WKXU9hC3VciJLwAWf8z0nsI-rTlRTnAkpeo5iBLhbO-SMpRM0NUXzVQsllo89bYFzg.jpg?format=auto" alt="The Guilty"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  LOVE HARD
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 8">
+          <div class="item_number">
+            3
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/3.png?format=auto" alt="3">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>33.03 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABdSTtEWX51HK0gQNLxoNCEHAdcJDUj-IUIqc0Ho4FheR3nlfyIxSRtFNWx7X9y3HAM5srwNSqE__YY0-EHwDMhBiwLgrbnDLx-KLlbWUtogt9K9ThtthZeMJsFBXQA.jpg?format=auto" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABdSTtEWX51HK0gQNLxoNCEHAdcJDUj-IUIqc0Ho4FheR3nlfyIxSRtFNWx7X9y3HAM5srwNSqE__YY0-EHwDMhBiwLgrbnDLx-KLlbWUtogt9K9ThtthZeMJsFBXQA.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABdSTtEWX51HK0gQNLxoNCEHAdcJDUj-IUIqc0Ho4FheR3nlfyIxSRtFNWx7X9y3HAM5srwNSqE__YY0-EHwDMhBiwLgrbnDLx-KLlbWUtogt9K9ThtthZeMJsFBXQA.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABdSTtEWX51HK0gQNLxoNCEHAdcJDUj-IUIqc0Ho4FheR3nlfyIxSRtFNWx7X9y3HAM5srwNSqE__YY0-EHwDMhBiwLgrbnDLx-KLlbWUtogt9K9ThtthZeMJsFBXQA.jpg?format=auto" alt="The harder they fall"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  THE HARDER THEY FALL
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 7">
+          <div class="item_number">
+            4
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/4.png?format=auto" alt="4">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>20.56 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABSd4YiRI4akxOnkCqC2Aqn8MrtGgluXvN3vbSakGx2ejrClryI0hkNYjoqRt2Owl0ySiE4-sNKiq7o6nAg7gRhD8hYGcCoPqChvTygrWfaKR7bKld5zsLWQ6kxlZaQ.jpg" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABSd4YiRI4akxOnkCqC2Aqn8MrtGgluXvN3vbSakGx2ejrClryI0hkNYjoqRt2Owl0ySiE4-sNKiq7o6nAg7gRhD8hYGcCoPqChvTygrWfaKR7bKld5zsLWQ6kxlZaQ.jpg" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABSd4YiRI4akxOnkCqC2Aqn8MrtGgluXvN3vbSakGx2ejrClryI0hkNYjoqRt2Owl0ySiE4-sNKiq7o6nAg7gRhD8hYGcCoPqChvTygrWfaKR7bKld5zsLWQ6kxlZaQ.jpg" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABSd4YiRI4akxOnkCqC2Aqn8MrtGgluXvN3vbSakGx2ejrClryI0hkNYjoqRt2Owl0ySiE4-sNKiq7o6nAg7gRhD8hYGcCoPqChvTygrWfaKR7bKld5zsLWQ6kxlZaQ.jpg" alt="Army of Thieves"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  army of thieves
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 6">
+          <div class="item_number">
+            5
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/5.png?format=auto" alt="5">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>13.78 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABVxH2_5AGGX3jcwy6y0rbYzHvWkzJQY0EiWpFvdrhg5x4wPfU4Xl472rNUrRzqjcpqOUNvdyKLcDlG1pPa8v804Dtb2bDzqZes2_AntdOElfr7FKsl6xV9nw5YMSdA.jpg?format=auto" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABVxH2_5AGGX3jcwy6y0rbYzHvWkzJQY0EiWpFvdrhg5x4wPfU4Xl472rNUrRzqjcpqOUNvdyKLcDlG1pPa8v804Dtb2bDzqZes2_AntdOElfr7FKsl6xV9nw5YMSdA.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABVxH2_5AGGX3jcwy6y0rbYzHvWkzJQY0EiWpFvdrhg5x4wPfU4Xl472rNUrRzqjcpqOUNvdyKLcDlG1pPa8v804Dtb2bDzqZes2_AntdOElfr7FKsl6xV9nw5YMSdA.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABVxH2_5AGGX3jcwy6y0rbYzHvWkzJQY0EiWpFvdrhg5x4wPfU4Xl472rNUrRzqjcpqOUNvdyKLcDlG1pPa8v804Dtb2bDzqZes2_AntdOElfr7FKsl6xV9nw5YMSdA.jpg?format=auto" alt="Father christmas is back"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  father christmas is back
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 5">
+          <div class="item_number">
+            6
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/6.png?format=auto" alt="6">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>7.9 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABRtLgp2rQRIGK5Gluh0yF2mk6KRIMjfrBUOIcY6_aDIj0ISx-e21eTTaZ4RS7yquWCIfgZGZTXYZ5UmcnswHdxJDJ61m.jpg?format=auto" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABRtLgp2rQRIGK5Gluh0yF2mk6KRIMjfrBUOIcY6_aDIj0ISx-e21eTTaZ4RS7yquWCIfgZGZTXYZ5UmcnswHdxJDJ61m.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABRtLgp2rQRIGK5Gluh0yF2mk6KRIMjfrBUOIcY6_aDIj0ISx-e21eTTaZ4RS7yquWCIfgZGZTXYZ5UmcnswHdxJDJ61m.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABRtLgp2rQRIGK5Gluh0yF2mk6KRIMjfrBUOIcY6_aDIj0ISx-e21eTTaZ4RS7yquWCIfgZGZTXYZ5UmcnswHdxJDJ61m.jpg?format=auto" alt="211"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  211
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 4">
+          <div class="item_number">
+            7
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/7.png?format=auto" alt="7">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>7.62 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABUStmKX96pWWdCASjN3Pf4qfb_hdiVU6GVWaEsbyS4vA1wu3JG5gYLDZxuvUPla_I9qlIUFRjfN8gL4_gFCJRwHSn05QzkGvBVkfILgABNmQ5h6F7kmIAFb7y4mV7A.jpg?format=auto" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABUStmKX96pWWdCASjN3Pf4qfb_hdiVU6GVWaEsbyS4vA1wu3JG5gYLDZxuvUPla_I9qlIUFRjfN8gL4_gFCJRwHSn05QzkGvBVkfILgABNmQ5h6F7kmIAFb7y4mV7A.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABUStmKX96pWWdCASjN3Pf4qfb_hdiVU6GVWaEsbyS4vA1wu3JG5gYLDZxuvUPla_I9qlIUFRjfN8gL4_gFCJRwHSn05QzkGvBVkfILgABNmQ5h6F7kmIAFb7y4mV7A.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABUStmKX96pWWdCASjN3Pf4qfb_hdiVU6GVWaEsbyS4vA1wu3JG5gYLDZxuvUPla_I9qlIUFRjfN8gL4_gFCJRwHSn05QzkGvBVkfILgABNmQ5h6F7kmIAFb7y4mV7A.jpg?format=auto" alt="Army of the dead"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  army of the dead
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 3">
+          <div class="item_number">
+            8
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/8.png?format=auto" alt="8">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>7.49 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABfqXANHWw1EkbFkxFhjELB7KXWuKbCeZacY2q-Basbfr1qNUQBXICLjpKYNJRVSIyrY9EStI76DuIaJD6wFldoKq8eqzFgrRzmoLPtTamMPD-SI4nVM8ZnBeNUz-8Q.jpg?format=auto" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABfqXANHWw1EkbFkxFhjELB7KXWuKbCeZacY2q-Basbfr1qNUQBXICLjpKYNJRVSIyrY9EStI76DuIaJD6wFldoKq8eqzFgrRzmoLPtTamMPD-SI4nVM8ZnBeNUz-8Q.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABfqXANHWw1EkbFkxFhjELB7KXWuKbCeZacY2q-Basbfr1qNUQBXICLjpKYNJRVSIyrY9EStI76DuIaJD6wFldoKq8eqzFgrRzmoLPtTamMPD-SI4nVM8ZnBeNUz-8Q.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABfqXANHWw1EkbFkxFhjELB7KXWuKbCeZacY2q-Basbfr1qNUQBXICLjpKYNJRVSIyrY9EStI76DuIaJD6wFldoKq8eqzFgrRzmoLPtTamMPD-SI4nVM8ZnBeNUz-8Q.jpg?format=auto" alt="Passing"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  Passing
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 2">
+          <div class="item_number">
+            9
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/9.png?format=auto" alt="9">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>6.92 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABd9WlufaHUMVtKsNxBa_5CYZdOkZYfP9WSVwjyfV54uPok-O7rDQFd7wirlUU6dggAiIt0Evtrn3b8gN3WWgz45pjJUL.jpg?format=auto" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABd9WlufaHUMVtKsNxBa_5CYZdOkZYfP9WSVwjyfV54uPok-O7rDQFd7wirlUU6dggAiIt0Evtrn3b8gN3WWgz45pjJUL.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABd9WlufaHUMVtKsNxBa_5CYZdOkZYfP9WSVwjyfV54uPok-O7rDQFd7wirlUU6dggAiIt0Evtrn3b8gN3WWgz45pjJUL.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABd9WlufaHUMVtKsNxBa_5CYZdOkZYfP9WSVwjyfV54uPok-O7rDQFd7wirlUU6dggAiIt0Evtrn3b8gN3WWgz45pjJUL.jpg?format=auto" alt="Transformers: the last knight"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  Transformers: the last knight
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item_container" style="z-index: 1">
+          <div class="item_number">
+            10
+          </div>
+          <div class="image_info_container">
+            <div class="info_container">
+              <div class="info_container_inner">
+                <div class="info_number">
+                  <img class="number_image" width="512" height="512" src="https://assets.codepen.io/1890963/10.png?format=auto" alt="10">
+                </div>
+                <div class="info_bottom_container">
+                  <div class="info_bottom_text">
+                    Watched for <strong>6.76 million hours</strong> this week.
+                    <a href="#">Watch now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <picture>
+                <source srcset="https://assets.codepen.io/1890963/AAAABSd4YiRI4akxOnkCqC2Aqn8MrtGgluXvN3vbSakGx2ejrClryI0hkNYjoqRt2Owl0ySiE4-sNKiq7o6nAg7gRhD8hYGcCoPqChvTygrWfaKR7bKld5zsLWQ6kxlZaQ.jpg" type="image/webp" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABbUsC4lEZ7JE02JCOj3Rto9JG1pY4s0uZ9nBPErMwQYnJBtItVjRZMX59PSf38Ntcgf-pIo2U0WBqF3SPJuQcyqWHKi2.jpg?format=auto" type="image/jpeg" media="(max-width: 400px)">
+                <source srcset="https://assets.codepen.io/1890963/AAAABbUsC4lEZ7JE02JCOj3Rto9JG1pY4s0uZ9nBPErMwQYnJBtItVjRZMX59PSf38Ntcgf-pIo2U0WBqF3SPJuQcyqWHKi2.jpg?format=auto" type="image/jpeg">
+                <img class="" style="margin-left: 0px;" src="https://assets.codepen.io/1890963/AAAABbUsC4lEZ7JE02JCOj3Rto9JG1pY4s0uZ9nBPErMwQYnJBtItVjRZMX59PSf38Ntcgf-pIo2U0WBqF3SPJuQcyqWHKi2.jpg?format=auto" alt="Jumanji: the next level"></picture>
+              <div class="bottom_title">
+                <div class="bottom_title_text">
+                  Jumanji: the next level
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="/javascripts/makePopular.js"></script>
+<script src="/javascripts/popular.js"></script>
+</body>
+</html>

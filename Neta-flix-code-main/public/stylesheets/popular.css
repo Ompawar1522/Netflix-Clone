@@ -1,0 +1,207 @@
+body {
+    background-color: #111;
+    margin: 0;
+    background-image: linear-gradient(rgb(0, 0, 0) 0px, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgb(0, 0, 0) 100%), url(https://assets.codepen.io/1890963/bg-1--300%402x.4b7178145e2885f8467a7357e2d15971_1.jpg?format=auto);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+  }
+  
+  .flex_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .heading {
+    font-size: 103px;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .outer_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: inherit;
+  }
+  
+  .inner_container {
+    padding-bottom: 32.8%;
+    position: relative;
+  }
+  
+  .ul_container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  
+  .item_container {
+    flex: 1 1 0%;
+    align-items: flex-start;
+    width: 35px;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: #111;
+    background-image: linear-gradient(0deg, transparent, #000);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .item_container:hover:not(.expanded) {
+    flex-basis: 8%;
+  }
+  .item_container:hover:not(.expanded) img {
+    opacity: 0.7;
+  }
+  .item_container:hover:not(.expanded) .item_number {
+    opacity: 0.9;
+  }
+  
+  .expanded {
+    flex-basis: 56.25%;
+    padding-left: 256px;
+  }
+  .expanded img {
+    opacity: 1 !important;
+  }
+  .expanded .item_number {
+    opacity: 0;
+  }
+  
+  .item_number {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    text-shadow: 0px 0px 2px black;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  
+  .image_info_container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .info_container {
+    height: 100%;
+    width: 256px;
+    margin-left: -256px;
+    position: relative;
+  }
+  
+  .info_container_inner {
+    height: 100%;
+  }
+  
+  .info_number {
+    display: flex;
+    justify-content: center;
+    height: 66%;
+  }
+  
+  .info_bottom_container {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+  }
+  
+  .info_bottom_text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0 1.5rem;
+  }
+  .info_bottom_text > strong {
+    font-weight: 800;
+  }
+  .info_bottom_text a {
+    display: block;
+    color: rgba(229, 9, 20, 0.9);
+    font-weight: 300;
+    padding: 5px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+  .info_bottom_text a:hover {
+    color: #fff;
+  }
+  
+  .number_image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    align-self: flex-start;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    height: 100%;
+    padding-left: 100%;
+  }
+  
+  .image:hover .bottom_title_text {
+    opacity: 1;
+  }
+  
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: 0px;
+    max-width: 100%;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+  }
+  
+  .bottom_title {
+    padding: 1rem;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: black 0px 0px 2px, black 0px 0px 10px;
+    background-image: linear-gradient(transparent 0px, rgba(0, 0, 0, 0.5) 100%);
+  }
+  
+  .bottom_title_text {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+  }/*# sourceMappingURL=popular.css.map */

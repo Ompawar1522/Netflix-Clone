@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/about.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="w-10">
+            <h1><img src="/img/logo.png" alt=""></h1>
+        </div>
+
+        <div class="w-90">
+            <%- include('../partials/navbar') %>
+        </div>
+    </header>
+    <div class="recommendations">
+        <div class="sesto recommendations-container" id="sesto"></div>
+    </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search)
+        img_url = "https://image.tmdb.org/t/p/w500"
+        Durl = "https://api.themoviedb.org/3/search/movie?api_key=6483a6e211092b09b7466883e175cd26&language=en-US&page=1&include_adult=false&query=" + params.get("q")
+        fetch(Durl).then(res => res.json()).then(data => {
+            const container = document.getElementById("sesto")
+            for (let i = 0; i < 20; i++) {
+                if (data.results[i].backdrop_path == null) {
+                    i++;
+                }
+                container.innerHTML += `
+        <div class="movie" onclick="location.href = '/${data.results[i].id}'">
+            <img src="${img_url}${data.results[i].backdrop_path}" alt="">
+            <p class="movie-title">${data.results[i].title}</p>
+        </div>
+        `;
+            }
+        })
+    </script>
+</body>
+
+</html>
